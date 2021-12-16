@@ -93,7 +93,7 @@
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform/>
-                    <TranslateTransform/>
+                    <TranslateTransform/> 
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
