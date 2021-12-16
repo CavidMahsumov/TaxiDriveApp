@@ -188,7 +188,13 @@
             <Path Data="M145,221 L491.6,221" HorizontalAlignment="Left" Height="1" Margin="30,115,0,0" Stretch="Fill" Stroke="#FFF8F8FC" VerticalAlignment="Top" Width="403" Fill="#FFF5F5F9"/>
             <TextBox HorizontalAlignment="Left" Height="37" Margin="35,141,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="403" Foreground="#FFF9F6F6" FontSize="16" BorderBrush="{x:Null}" Background="{x:Null}"/>
             <Path Data="M145,221 L491.6,221" Fill="#FFF7F7FA" HorizontalAlignment="Left" Height="1" Margin="30,177,0,0" Stretch="Fill" Stroke="#FFF3F3F6" VerticalAlignment="Top" Width="403"/>
-            <Rectangle HorizontalAlignment="Left" Height="47" Margin="88,258,0,0" Stroke="white" VerticalAlignment="Top" Width="301" RadiusX="23.5" RadiusY="23.5" Fill="#FFF7F7F4"/>
+            <Rectangle HorizontalAlignment="Left" Height="47" Margin="88,258,0,0" Stroke="white" VerticalAlignment="Top" Width="301" RadiusX="23.5" RadiusY="23.5" Fill="#FFF7F7F4">
+                <i1:Interaction.Triggers>
+                    <i1:EventTrigger EventName="MouseDown" >
+                        <i1:InvokeCommandAction Command="{Binding MouseDownForRegisterNextButton}" />
+                    </i1:EventTrigger>
+                </i1:Interaction.Triggers>
+            </Rectangle>
             <TextBlock HorizontalAlignment="Left" Height="29" Margin="215,266,0,0" Text="NEXT" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" Background="#FFF7F5F5" Foreground="#FFFFFF33" FontSize="22" FontWeight="Bold"/>
             <TextBox HorizontalAlignment="Left" Height="37" Margin="35,204,0,0" Text="Repeat Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="403" Foreground="#FFF9F6F6" FontSize="16" BorderBrush="{x:Null}" Background="{x:Null}"/>
             <Path Data="M145,221 L491.6,221" Fill="#FFF8F8FC" HorizontalAlignment="Left" Height="1" Margin="30,241,0,0" Stretch="Fill" Stroke="#FFF0F0F3" VerticalAlignment="Top" Width="403"/>

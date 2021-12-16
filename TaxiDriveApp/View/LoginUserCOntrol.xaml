@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TaxiDriveApp.View" xmlns:i1="http://schemas.microsoft.com/expression/2010/interactivity"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="653" d:DesignWidth="707">
     <UserControl.Resources>
         <Storyboard x:Key="Storyboard1">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="textBlock" Storyboard.TargetProperty="(UIElement.Visibility)">
@@ -77,33 +77,145 @@
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
-       
+        <Storyboard x:Key="ResetStoryBoard">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="textBlock2" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle2" Storyboard.TargetProperty="(Rectangle.RadiusX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="9.4"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="9.4"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="4.419"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle2" Storyboard.TargetProperty="(Rectangle.RadiusY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="9.4"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="9.4"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="4.419"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1.582"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1.2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="textBlock1" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.2000000" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1.681"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="4.983"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="6.038"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="7.332"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="7.894"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="8.864"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="16"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="-32"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="-56.8"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="-87.2"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="-100.4"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="-127.2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle2" Storyboard.TargetProperty="(Shape.StrokeThickness)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="rectangle" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="textBlock" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ResetPassword" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.9000000" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
     </UserControl.Resources>
 
-    <Grid x:Name="Login" HorizontalAlignment="Left" Height="337" Margin="114,106,0,0" VerticalAlignment="Top" Width="439">
-        <Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Height="53" Stroke="White" VerticalAlignment="Top" Width="12" RadiusX="0" RadiusY="0" Fill="#FFFFFF33" Margin="1,0,0,0"/>
-        <TextBlock HorizontalAlignment="Left" Height="53" Margin="48,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" Text="LOGIN" FontWeight="Bold" FontSize="38" TextDecorations="{x:Null}" FontStyle="Normal" Foreground="#FFFFFF33"/>
-        <TextBox HorizontalAlignment="Left" Height="37" Margin="36,78,0,0" Text="Username" TextWrapping="Wrap" VerticalAlignment="Top" Width="403" Foreground="#FF7D7D7D" FontSize="16" BorderBrush="#FFF9FAFF"/>
-        <Path Data="M145,221 L491.6,221" Fill="#FF6C6C71" HorizontalAlignment="Left" Height="1" Margin="31,115,0,0" Stretch="Fill" Stroke="#FF6C6C71" VerticalAlignment="Top" Width="403"/>
-        <TextBox HorizontalAlignment="Left" Height="37" Margin="36,160,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="403" Foreground="#FF7D7D7D" FontSize="16" BorderBrush="#FFFBFCFF"/>
-        <Path Data="M145,221 L491.6,221" Fill="#FF6C6C71" HorizontalAlignment="Left" Height="1" Margin="31,196,0,0" Stretch="Fill" Stroke="#FF6C6C71" VerticalAlignment="Top" Width="403"/>
-        <Rectangle x:Name="rectangle2" HorizontalAlignment="Left" Height="47" Margin="89,258,0,0" Stroke="white" VerticalAlignment="Top" Width="301" RadiusX="23.5" RadiusY="23.5" Fill="#FFFFFF33" RenderTransformOrigin="0.5,0.5">
+    <Grid Name="MainGrid" Margin="4,0,-4,0" Visibility="Visible">
+        <Rectangle HorizontalAlignment="Center" Height="409" Margin="0,34,0,0" Stroke="Black" VerticalAlignment="Top" Width="427" RadiusX="17.559" RadiusY="17.559" Fill="DimGray"/>
+        <Rectangle HorizontalAlignment="Center" Height="425" Margin="0,47,0,0" Stroke="#FF6C6C71" VerticalAlignment="Top" Width="479" RadiusX="17.559" RadiusY="17.559" Fill="White" d:IsLocked="True"/>
+        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="82" Margin="554,106,0,0" Stroke="White" VerticalAlignment="Top" Width="80" RadiusX="28.067" RadiusY="28.067" Fill="#FFFFFF33" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform/>
-                    <TranslateTransform/> 
+                    <TranslateTransform/>
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="24" Margin="216,267,0,0" Text="GO" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Background="Transparent" Foreground="#FF8C840A" FontSize="22" FontWeight="Bold"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="27" Margin="166,310,0,0" Text="Forgot password ?" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="16" Foreground="#FF684B4B">
-                <i1:Interaction.Triggers>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="42" Margin="580,116,0,0" Text="+" TextWrapping="Wrap" VerticalAlignment="Top" Width="44" FontSize="40" FontWeight="Bold" Foreground="#FF8C840A">
+             <i1:Interaction.Triggers>
         <i1:EventTrigger EventName="MouseDown" >
-            <i1:InvokeCommandAction Command="{Binding MouseDownForReset}" />
+            <i1:InvokeCommandAction Command="{Binding MouseDownPulseButton}" />
         </i1:EventTrigger>
     </i1:Interaction.Triggers>
         </TextBlock>
+        <Grid x:Name="Login" HorizontalAlignment="Left" Height="337" Margin="114,106,0,0" VerticalAlignment="Top" Width="439">
+            <Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Height="53" Stroke="White" VerticalAlignment="Top" Width="12" RadiusX="0" RadiusY="0" Fill="#FFFFFF33" Margin="1,0,0,0"/>
+            <TextBlock HorizontalAlignment="Left" Height="53" Margin="48,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" Text="LOGIN" FontWeight="Bold" FontSize="38" TextDecorations="{x:Null}" FontStyle="Normal" Foreground="#FFFFFF33"/>
+            <TextBox HorizontalAlignment="Left" Height="37" Margin="36,78,0,0" Text="Username" TextWrapping="Wrap" VerticalAlignment="Top" Width="403" Foreground="#FF7D7D7D" FontSize="16" BorderBrush="#FFF9FAFF"/>
+            <Path Data="M145,221 L491.6,221" Fill="#FF6C6C71" HorizontalAlignment="Left" Height="1" Margin="31,115,0,0" Stretch="Fill" Stroke="#FF6C6C71" VerticalAlignment="Top" Width="403"/>
+            <TextBox HorizontalAlignment="Left" Height="37" Margin="36,160,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="403" Foreground="#FF7D7D7D" FontSize="16" BorderBrush="#FFFBFCFF"/>
+            <Path Data="M145,221 L491.6,221" Fill="#FF6C6C71" HorizontalAlignment="Left" Height="1" Margin="31,196,0,0" Stretch="Fill" Stroke="#FF6C6C71" VerticalAlignment="Top" Width="403"/>
+            <Rectangle x:Name="rectangle2" HorizontalAlignment="Left" Height="47" Margin="89,258,0,0" Stroke="white" VerticalAlignment="Top" Width="301" RadiusX="23.5" RadiusY="23.5" Fill="#FFFFFF33" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="24" Margin="216,267,0,0" Text="GO" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Background="Transparent" Foreground="#FF8C840A" FontSize="22" FontWeight="Bold"/>
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="27" Margin="166,310,0,0" Text="Forgot password ?" TextWrapping="Wrap" VerticalAlignment="Top" Width="146" FontSize="16" Foreground="#FF684B4B">
+                <i1:Interaction.Triggers>
+        <i1:EventTrigger EventName="MouseDown" >
+            <i1:InvokeCommandAction Command="{Binding MouseDownResetButton}" />
+        </i1:EventTrigger>
+    </i1:Interaction.Triggers>
+            </TextBlock>
+        </Grid>
+        <Grid x:Name="Register" HorizontalAlignment="Left" Height="337" VerticalAlignment="Top" Width="438" Margin="115,106,0,0" Visibility="Hidden">
+            <Rectangle HorizontalAlignment="Left" Height="53" Stroke="White" VerticalAlignment="Top" Width="12" RadiusX="0" RadiusY="0" Fill="#FFF3F3F0"/>
+            <TextBlock HorizontalAlignment="Left" Height="53" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" Text="REGISTER" FontWeight="Bold" FontSize="38" TextDecorations="{x:Null}" FontStyle="Normal" Foreground="#FFFDFDFD" Margin="47,0,0,0"/>
+            <TextBox HorizontalAlignment="Left" Height="37" Margin="35,78,0,0" Text="Username" TextWrapping="Wrap" VerticalAlignment="Top" Width="403" Foreground="#FFF7F1F1" FontSize="16" BorderBrush="{x:Null}" Background="{x:Null}"/>
+            <Path Data="M145,221 L491.6,221" HorizontalAlignment="Left" Height="1" Margin="30,115,0,0" Stretch="Fill" Stroke="#FFF8F8FC" VerticalAlignment="Top" Width="403" Fill="#FFF5F5F9"/>
+            <TextBox HorizontalAlignment="Left" Height="37" Margin="35,141,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="403" Foreground="#FFF9F6F6" FontSize="16" BorderBrush="{x:Null}" Background="{x:Null}"/>
+            <Path Data="M145,221 L491.6,221" Fill="#FFF7F7FA" HorizontalAlignment="Left" Height="1" Margin="30,177,0,0" Stretch="Fill" Stroke="#FFF3F3F6" VerticalAlignment="Top" Width="403"/>
+            <Rectangle HorizontalAlignment="Left" Height="47" Margin="88,258,0,0" Stroke="white" VerticalAlignment="Top" Width="301" RadiusX="23.5" RadiusY="23.5" Fill="#FFF7F7F4">
+                <i1:Interaction.Triggers>
+                    <i1:EventTrigger EventName="MouseDown" >
+                        <i1:InvokeCommandAction Command="{Binding MouseDownForRegisterNextButton}" />
+                    </i1:EventTrigger>
+                </i1:Interaction.Triggers>
+            </Rectangle>
+            <TextBlock HorizontalAlignment="Left" Height="29" Margin="215,266,0,0" Text="NEXT" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" Background="#FFF7F5F5" Foreground="#FFFFFF33" FontSize="22" FontWeight="Bold"/>
+            <TextBox HorizontalAlignment="Left" Height="37" Margin="35,204,0,0" Text="Repeat Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="403" Foreground="#FFF9F6F6" FontSize="16" BorderBrush="{x:Null}" Background="{x:Null}"/>
+            <Path Data="M145,221 L491.6,221" Fill="#FFF8F8FC" HorizontalAlignment="Left" Height="1" Margin="30,241,0,0" Stretch="Fill" Stroke="#FFF0F0F3" VerticalAlignment="Top" Width="403"/>
+        </Grid>
+        <Grid x:Name="ResetPassword" HorizontalAlignment="Left" Height="305" VerticalAlignment="Top" Width="438" Margin="115,107,0,0" Visibility="Hidden">
+            <Rectangle HorizontalAlignment="Left" Height="53" Stroke="White" VerticalAlignment="Top" Width="12" RadiusX="0" RadiusY="0" Fill="#FFF3F3F0" Margin="2,0,0,0"/>
+            <TextBlock HorizontalAlignment="Left" Height="53" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" FontWeight="Bold" FontSize="38" TextDecorations="{x:Null}" FontStyle="Normal" Foreground="#FFFDFDFD" Margin="47,0,0,0" Text=" Reset Password"/>
+            <TextBox HorizontalAlignment="Left" Height="37" Margin="35,141,0,0" Text="Email" TextWrapping="Wrap" VerticalAlignment="Top" Width="403" Foreground="#FFF9F6F6" FontSize="16" BorderBrush="{x:Null}" Background="{x:Null}"/>
+            <Path Data="M145,221 L491.6,221" Fill="#FFF7F7FA" HorizontalAlignment="Left" Height="1" Margin="30,177,0,0" Stretch="Fill" Stroke="#FFF3F3F6" VerticalAlignment="Top" Width="403"/>
+            <Rectangle  HorizontalAlignment="Left" Height="47" Margin="88,258,0,0" Stroke="white" VerticalAlignment="Top" Width="301" RadiusX="23.5" RadiusY="23.5" Fill="#FFF7F7F4">
+                <i1:Interaction.Triggers>
+                    <i1:EventTrigger EventName="MouseDown" >
+                        <i1:InvokeCommandAction Command="{Binding MouseDownSendButton}" />
+                    </i1:EventTrigger>
+                </i1:Interaction.Triggers>
+            </Rectangle>
+            <TextBlock HorizontalAlignment="Left" Height="29" Margin="215,266,0,0" Text="SEND" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" Background="#FFF7F5F5" Foreground="#FFFFFF33" FontSize="22" FontWeight="Bold">
+
+            </TextBlock>
+        </Grid>
     </Grid>
 </UserControl>
