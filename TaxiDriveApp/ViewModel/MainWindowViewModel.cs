@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Animation;
 using TaxiDriveApp.Commands;
+using TaxiDriveApp.View;
 
 namespace TaxiDriveApp.ViewModel
 {
@@ -36,9 +37,22 @@ namespace TaxiDriveApp.ViewModel
             MouseDownForSend = new RelayCommand((sender) =>
             {
                 //mainWindow.Login.Visibility = Visibility.Visible;
-                
 
+                for (int i = 0; i < mainWindow.ResetPassword.Children.Count; i++)
+                {
+                    mainWindow.ResetPassword.Children.RemoveAt(i);
+                }
 
+                for (int i = 0; i < mainWindow.Login.Children.Count; i++)
+                {
+                    mainWindow.Login.Children.RemoveAt(i);
+                }
+                for (int i = 0; i < mainWindow.Register.Children.Count; i++)
+                {
+                    mainWindow.Register.Children.RemoveAt(i);
+                }
+                LoginUserCOntrol loginUserCOntrol = new LoginUserCOntrol();
+                mainWindow.MainGrid.Children.Add(loginUserCOntrol);
             });
         }
     }

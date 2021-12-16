@@ -135,7 +135,7 @@
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
-    <Grid Margin="4,0,-4,0" Visibility="Visible">
+    <Grid Name="MainGrid" Margin="4,0,-4,0" Visibility="Visible">
         <Rectangle HorizontalAlignment="Center" Height="409" Margin="0,34,0,0" Stroke="Black" VerticalAlignment="Top" Width="427" RadiusX="17.559" RadiusY="17.559" Fill="DimGray"/>
         <Rectangle HorizontalAlignment="Center" Height="425" Margin="0,47,0,0" Stroke="#FF6C6C71" VerticalAlignment="Top" Width="479" RadiusX="17.559" RadiusY="17.559" Fill="White" d:IsLocked="True"/>
         <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="82" Margin="554,106,0,0" Stroke="White" VerticalAlignment="Top" Width="80" RadiusX="28.067" RadiusY="28.067" Fill="#FFFFFF33" RenderTransformOrigin="0.5,0.5">
