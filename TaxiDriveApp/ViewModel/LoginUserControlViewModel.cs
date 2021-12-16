@@ -38,6 +38,7 @@ namespace TaxiDriveApp.ViewModel
             });
             MouseDownSendButton = new RelayCommand((sender) =>
             {
+
                 for (int i = 0; i < loginUserControl.ResetPassword.Children.Count; i++)
                 {
                     loginUserControl.ResetPassword.Children.RemoveAt(i);
@@ -51,7 +52,7 @@ namespace TaxiDriveApp.ViewModel
                 {
                     loginUserControl.Register.Children.RemoveAt(i);
                 }
-               
+                
                 LoginUserCOntrol loginUserCOntrol = new LoginUserCOntrol();
                 loginUserControl.MainGrid.Children.Add(loginUserCOntrol);
 
@@ -71,7 +72,10 @@ namespace TaxiDriveApp.ViewModel
                 {
                     loginUserControl.Register.Children.RemoveAt(i);
                 }
-              
+                for (int i = 0; i <= loginUserControl.MainGrid.Children.Count; i++) 
+                {
+                    loginUserControl.MainGrid.Children.RemoveAt(i);
+                }
                 LoginUserCOntrol loginUserCOntrol = new LoginUserCOntrol();
                 loginUserControl.MainGrid.Children.Add(loginUserCOntrol);
                 
